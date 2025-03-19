@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/timeOfDayMealInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter time of Day for Meal"
+        android:inputType="text"
+        android:text=""
+        android:textAlignment="center"
+        android:textStyle="italic" />
+
+
+    <EditText
+        android:id="@+id/timeOfDayBeverageInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Enter Time of Day for Beverage"
+        android:inputType="text"
+        android:text=""
+        android:textAlignment="center"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/suggestedBeverage"
+        android:layout_width="364dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:translationX="20dp"
+        android:translationY="280dp" />
+
+
+    <Button
+        android:id="@+id/suggestedMealBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Suggested Meal"
+        android:textStyle="italic"
+        android:translationY="70dp" />
+
+
+
+    <TextView
+        android:id="@+id/suggestedMeal"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:textAlignment="center"
+        android:translationX="20dp"
+        android:translationY="-50dp" />
+
+
+    <Button
+        android:id="@+id/suggestedBeverageBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Suggested Beverage"
+        android:textStyle="italic"
+        android:translationY="200dp" />
+
+
+    <Button
+        android:id="@+id/exitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:textStyle="italic"
+        android:translationY="350dp" />
+
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:translationX="0dp"
+        android:translationY="250dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Suggested Meal for the Day:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:translationY="-290dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Suggested Beverage for The Day:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:translationY="-150dp" />
+
+</LinearLayout>
