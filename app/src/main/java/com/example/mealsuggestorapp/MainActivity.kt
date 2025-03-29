@@ -1,5 +1,5 @@
 package com.example.mealsuggestorapp
-
+// kincade is the G
 import android.health.connect.datatypes.MealType
 import android.os.Bundle
 import android.widget.Button
