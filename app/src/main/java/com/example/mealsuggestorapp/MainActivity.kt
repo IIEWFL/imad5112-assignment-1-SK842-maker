@@ -75,6 +75,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val mealRecommended = when (timeOfDay) {
+
             "morning" -> listOf("scrambled eggs","muesli","pancakes")
             "midday" -> listOf("fruit salad","choc chip muffin","raisin","biscuit")
             "afternoon" -> listOf("chicken avo feta wrap","beef sandwich","steak&kidney pie")
@@ -103,7 +104,7 @@ class MainActivity : AppCompatActivity() {
             recommendBeverageTextView.text = "Error: Unable to recommend a beverage for you "
         }
 
-        val beverageRecommended = when (timeOfDay) {
+        val beverageRecommended = when  (timeOfDay) {
                 "morning" -> listOf("coffee","cappuccino","espresso")
                 "midday" ->  listOf("strawberry smoothie","banana smoothie", "apple smoothie")
                 "afternoon" -> listOf("coca cola","creme soda","stoney")
