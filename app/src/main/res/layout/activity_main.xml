@@ -7,31 +7,42 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
+    android:background="#000000"
     tools:context=".MainActivity">
 
 
     <EditText
         android:id="@+id/timeOfDayMealInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
         android:ems="10"
-        android:hint="Enter time of Day for Meal"
+        android:hint="Enter time Period for a Meal"
         android:inputType="text"
         android:text=""
         android:textAlignment="center"
-        android:textStyle="italic" />
+        android:textColor="#4CAF50"
+        android:textColorHint="#D9DCF0DC"
+        android:textStyle="italic"
+        android:translationX="30dp"
+        android:translationY="150dp" />
 
 
     <EditText
         android:id="@+id/timeOfDayBeverageInput"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="Enter Time of Day for Beverage"
+        android:hint="Enter time Period for a Beverage"
         android:inputType="text"
         android:text=""
         android:textAlignment="center"
-        android:textStyle="italic" />
+        android:textColor="#2196F3"
+        android:textColorHint="@color/white"
+        android:textStyle="italic"
+        android:translationX="30dp"
+        android:translationY="350dp" />
+
+
 
     <TextView
         android:id="@+id/suggestedBeverage"
@@ -39,18 +50,24 @@
         android:layout_height="50dp"
         android:text=""
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="18sp"
+        android:textColor="#7A88D9"
         android:translationX="20dp"
-        android:translationY="280dp" />
+        android:background="@color/white"
+        android:translationY="380dp" />
+
 
 
     <Button
-        android:id="@+id/suggestedMealBtn"
+        android:id="@+id/recommendMealButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Suggested Meal"
+        android:backgroundTint="#4CAF50"
+        android:text="Recommend Meal"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         android:textStyle="italic"
-        android:translationY="70dp" />
+        android:translationY="150dp" />
 
 
 
@@ -59,57 +76,85 @@
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:text=""
+        android:textSize="18sp"
         android:textAlignment="center"
+        android:textColor="#FF9800"
         android:translationX="20dp"
-        android:translationY="-50dp" />
+        android:background="@color/white"
+        android:translationY="30dp" />
 
 
     <Button
-        android:id="@+id/suggestedBeverageBtn"
+        android:id="@+id/recommendBeverageButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Suggested Beverage"
+        android:text="Recommend Beverage"
+        android:textSize="18sp"
         android:textStyle="italic"
-        android:translationY="200dp" />
+        android:backgroundTint="#2196F3"
+        android:textColor="@color/black"
+        android:translationY="300dp" />
 
 
     <Button
-        android:id="@+id/exitBtn"
+        android:id="@+id/exitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Exit"
         android:textStyle="italic"
-        android:translationY="350dp" />
+        android:backgroundTint="#BF0707"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:translationY="500dp" />
 
 
     <Button
-        android:id="@+id/resetBtn"
+        android:id="@+id/resetButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Reset"
         android:textAlignment="center"
         android:textStyle="italic"
-        android:translationX="0dp"
-        android:translationY="250dp" />
+        android:textSize="18sp"
+        android:backgroundTint="#FFEB3B"
+        android:textColor="@color/black"
+        android:translationY="400dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/header_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Suggested Meal for the Day:"
+        android:text="Suggest a Meal for the Day:"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold|italic"
-        android:translationY="-290dp" />
+        android:textColor="#4CAF50"
+        android:backgroundTint="@color/white"
+        android:translationY="-270dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/header_title2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Suggested Beverage for The Day:"
+        android:text="Suggest a Beverage for the Day:"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold|italic"
-        android:translationY="-150dp" />
+        android:textColor="#2196F3"
+        android:translationY="-50dp" />
+
+
+    <TextView
+        android:id="@+id/header_title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text= "Daily Meal and Beverage Recommender"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:translationY="-400dp"
+        android:typeface="monospace" />
 
 </LinearLayout>

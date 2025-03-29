@@ -1,6 +1,7 @@
 package com.example.mealsuggestorapp
 
 import android.health.connect.datatypes.MealType
+import android.icu.util.Output
 import android.os.Bundle
 import android.view.inputmethod.InlineSuggestion
 import android.widget.Button
@@ -12,19 +13,20 @@ import androidx.annotation.CheckResult
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlin.random.Random
+import kotlin.system.exitProcess
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var timeOfDayMealInput : EditText
     private lateinit var timeOfDayBeverageInput : EditText
-    private lateinit var suggestedMeal : TextView
-    private lateinit var suggestedMealbtn : Button
-    private lateinit var suggestedBeverage :TextView
-    private lateinit var suggestedBeveragebtn :Button
-    private lateinit var resetBtn : Button
-    private lateinit var exitBtn : Button
-
+    private lateinit var recommendMealTextView: TextView
+    private lateinit var recommendMealButton: Button
+    private lateinit var recommendBeverageTextView: TextView
+    private lateinit var recommendBeverageButton: Button
+    private lateinit var resetButton: Button
+    private lateinit var exitButton: Button
 
 
 
@@ -34,88 +36,101 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-
         timeOfDayMealInput = findViewById(R.id.timeOfDayMealInput)
         timeOfDayBeverageInput = findViewById(R.id.timeOfDayBeverageInput)
-        suggestedMeal = findViewById(R.id.suggestedMeal)
-        suggestedMealbtn = findViewById(R.id.suggestedMealBtn)
-        suggestedBeverage = findViewById(R.id.suggestedBeverage)
-        suggestedBeveragebtn = findViewById(R.id.suggestedBeverageBtn)
-        resetBtn = findViewById(R.id.resetBtn)
-        exitBtn = findViewById(R.id.exitBtn)
+        recommendMealTextView = findViewById(R.id.suggestedMeal)
+        recommendMealButton = findViewById(R.id.recommendMealButton)
+        recommendBeverageTextView = findViewById(R.id.suggestedBeverage)
+        recommendBeverageButton = findViewById(R.id.recommendBeverageButton)
+        resetButton = findViewById(R.id.resetButton)
+        exitButton = findViewById(R.id.exitButton)
 
 
 
-        suggestedMealbtn.setOnClickListener() {
-            suggestedMeal()
+        recommendMealButton.setOnClickListener() {
+            recommendedMealButton()
         }
-        suggestedBeveragebtn.setOnClickListener() {
-            suggestedBeverage()
+       recommendBeverageButton.setOnClickListener() {
+            recommendedBeverageButton()
         }
-
-        resetBtn.setOnClickListener() {
+        resetButton.setOnClickListener() {
            handleResetButton()
         }
-        exitBtn.setOnClickListener() {
-           handleExitButton()
+        exitButton.setOnClickListener() {
+           finishAffinity()
+           exitProcess(0)
+
         }
 
     }
 
+    private fun recommendedMealButton() {
+        val timeOfDay = timeOfDayMealInput.text.toString().trim()
+        if (timeOfDay.isEmpty()) {
+            recommendMealTextView.text = "Error: Please type in a valid time of day."
+            return
+        }
+        else {
+            recommendMealTextView.text = "Error:Unable to recommend a meal for you."
+        }
 
-    private fun suggestedMeal() {
-            val timeOfDay = timeOfDayMealInput.text.toString().trim().lowercase()
-
-                 when (timeOfDay) {
-
-
-                "morning" ->  print("ScrambledEggs")
-                "mid-Morning snack" -> print("Fruit")
-                "afternoon" -> print("Chicken Wrap")
-                "late Afternoon snack" -> print("Nuts")
-                "Dinner" -> print("Medium rare Steak")
-                "Desert" -> print("Sorbet")
-
-                else -> println( "Invalid entry")
-
-
+        val mealRecommended = when (timeOfDay) {
+            "morning" -> listOf("scrambled eggs","muesli","pancakes")
+            "midday" -> listOf("fruit salad","choc chip muffin","raisin","biscuit")
+            "afternoon" -> listOf("chicken avo feta wrap","beef sandwich","steak&kidney pie")
+            "late afternoon" -> listOf("macadamia nuts","yoghurt","Crisps")
+            "evening" -> listOf("spaghetti and mince","lasagne","macaroni and cheese")
+            "late evening" -> listOf("sorbet","vanilla ice cream","apple crumble")
+            else -> {
+               recommendMealTextView.text = "Input a valid Time of Day for Meal: $timeOfDay"
+               return
             }
+        }
+
+         val  mealSuggested = mealRecommended.random()
+       recommendMealTextView.text = "$mealSuggested"
     }
 
 
-    private fun  suggestedBeverage()  {
-            val timeOfDay = timeOfDayBeverageInput. text.toString().trim().uppercase()
 
-                when (timeOfDay) {
+    private fun recommendedBeverageButton()  {
+        val timeOfDay = timeOfDayBeverageInput.text.toString().trim()
+        if(timeOfDay.isEmpty()) {
+            recommendBeverageTextView.text = "Error: Please Type in a valid time of day."
+            return
+        }
+        else{
+            recommendBeverageTextView.text = "Error: Unable to recommend a beverage for you "
+        }
 
+        val beverageRecommended = when (timeOfDay) {
+                "morning" -> listOf("coffee","cappuccino","espresso")
+                "midday" ->  listOf("strawberry smoothie","banana smoothie", "apple smoothie")
+                "afternoon" -> listOf("coca cola","creme soda","stoney")
+                "late afternoon" -> listOf("tea","orange juice","apple juice")
+                "evening" -> listOf("Red wine","white wine","champagne")
+                "late evening" -> listOf("sparkling water","still water","chamomile tea")
+                else -> {
+                    println("Input a valid Time of Day for Beverage: $timeOfDay")
+                    return
 
-                "morning" -> print("You can have a Cup of Coffee")
-                "mid Morning beverage" -> print("You can have a Strawberry Smoothie")
-                "noon" -> print("Coca Cola")
-                "late noon Beverage" -> print("tea")
-                "dinner" -> print("Sparkling Water")
-
-                else -> println("Invalid Entry")
-
-            }
-
+                }
+        }
+        val  beverageSuggested = beverageRecommended.random()
+        recommendBeverageTextView.text = "$beverageSuggested"
     }
+
 
 
     private fun handleResetButton() {
         timeOfDayMealInput.text.clear()
-        suggestedMeal.text = ""
         timeOfDayBeverageInput.text.clear()
-        suggestedBeverage.text = ""
-
-
-    }
-
-    private fun handleExitButton () {
-
-    return
+        recommendMealTextView.text = ""
+        recommendBeverageTextView.text = ""
+        return
 
     }
+
 }
 
 
