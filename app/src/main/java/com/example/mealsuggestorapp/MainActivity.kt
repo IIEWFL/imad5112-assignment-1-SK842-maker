@@ -1,19 +1,16 @@
 package com.example.mealsuggestorapp
 
 import android.health.connect.datatypes.MealType
-import android.icu.util.Output
 import android.os.Bundle
-import android.view.inputmethod.InlineSuggestion
 import android.widget.Button
 import android.widget.CheckedTextView
 import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
-import androidx.annotation.CheckResult
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import kotlin.random.Random
+
 import kotlin.system.exitProcess
 
 
@@ -67,25 +64,34 @@ class MainActivity : AppCompatActivity() {
     private fun recommendedMealButton() {
         val timeOfDay = timeOfDayMealInput.text.toString().trim()
         if (timeOfDay.isEmpty()) {
-            recommendMealTextView.text = "Error: Please type in a valid time of day."
+            recommendMealTextView.text = "Error: Please type in a valid time period: $timeOfDay."
             return
         }
         else {
             recommendMealTextView.text = "Error:Unable to recommend a meal for you."
         }
 
-        val mealRecommended = when (timeOfDay) {
+        val mealRecommended = if (timeOfDay == "morning") {
+            listOf("scrambled eggs", "muesli", "pancakes")
+        } else if (timeOfDay == "midday") {
+            listOf("fruit salad", "choc chip muffin", "raisin", "biscuit")
 
-            "morning" -> listOf("scrambled eggs","muesli","pancakes")
-            "midday" -> listOf("fruit salad","choc chip muffin","raisin","biscuit")
-            "afternoon" -> listOf("chicken avo feta wrap","beef sandwich","steak&kidney pie")
-            "late afternoon" -> listOf("macadamia nuts","yoghurt","Crisps")
-            "evening" -> listOf("spaghetti and mince","lasagne","macaroni and cheese")
-            "late evening" -> listOf("sorbet","vanilla ice cream","apple crumble")
-            else -> {
-               recommendMealTextView.text = "Input a valid Time of Day for Meal: $timeOfDay"
+        } else if (timeOfDay == "afternoon") {
+            listOf("chicken avo feta wrap", "beef sandwich", "steak&kidney pie")
+
+        } else if (timeOfDay == "late afternoon") {
+            listOf("macadamia nuts", "yoghurt", "Crisps")
+
+        } else if (timeOfDay == "evening") {
+            listOf("spaghetti and mince", "lasagne", "macaroni and cheese")
+
+        } else if (timeOfDay == "late evening") {
+            listOf("sorbet", "vanilla ice cream", "apple crumble")
+
+        } else  {
+               recommendMealTextView.text = " Error: Please type in a valid time period: $timeOfDay"
                return
-            }
+
         }
 
          val  mealSuggested = mealRecommended.random()
@@ -104,18 +110,27 @@ class MainActivity : AppCompatActivity() {
             recommendBeverageTextView.text = "Error: Unable to recommend a beverage for you "
         }
 
-        val beverageRecommended = when  (timeOfDay) {
-                "morning" -> listOf("coffee","cappuccino","espresso")
-                "midday" ->  listOf("strawberry smoothie","banana smoothie", "apple smoothie")
-                "afternoon" -> listOf("coca cola","creme soda","stoney")
-                "late afternoon" -> listOf("tea","orange juice","apple juice")
-                "evening" -> listOf("Red wine","white wine","champagne")
-                "late evening" -> listOf("sparkling water","still water","chamomile tea")
-                else -> {
-                    println("Input a valid Time of Day for Beverage: $timeOfDay")
+        val beverageRecommended = if (timeOfDay == "morning") {
+            listOf("coffee", "cappuccino", "espresso")
+        }    else if (timeOfDay == "midday") {
+            listOf("strawberry smoothie", "banana smoothie", "apple smoothie")
+
+        }    else if (timeOfDay == "afternoon") {
+            listOf("coca cola", "creme soda", "stoney")
+
+        }    else if (timeOfDay == "late afternoon") {
+            listOf("tea", "orange juice", "apple juice")
+
+        }    else if (timeOfDay == "evening") {
+            listOf("Red wine", "white wine", "champagne")
+
+        }   else if (timeOfDay == "late evening") {
+            listOf("sparkling water", "still water", "chamomile tea")
+
+        }  else  {
+                    recommendBeverageTextView.text =" Error: please type in a valid time period: $timeOfDay"
                     return
 
-                }
         }
         val  beverageSuggested = beverageRecommended.random()
         recommendBeverageTextView.text = "$beverageSuggested"
