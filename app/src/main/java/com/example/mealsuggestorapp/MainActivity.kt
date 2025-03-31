@@ -1,5 +1,5 @@
 package com.example.mealsuggestorapp
-// kincade is the G//
+
 import android.health.connect.datatypes.MealType
 import android.os.Bundle
 import android.widget.Button
@@ -14,7 +14,7 @@ import kotlin.system.exitProcess
 
 
 class MainActivity : AppCompatActivity() {
-
+    // kincade is the G//
     private lateinit var timePeriodMealInput : EditText
     private lateinit var timePeriodBeverageInput : EditText
     private lateinit var recommendMealTextView: TextView
@@ -56,86 +56,85 @@ class MainActivity : AppCompatActivity() {
         exitButton.setOnClickListener() {
            finishAffinity()
            exitProcess(0)
-           // this allows the user to exit the app
+           //  allows the user to exit the app//
         }
 
     }
 
     private fun recommendedMealButton() {
-        val timeOfDay = timePeriodMealInput.text.toString().trim()
-        if (timeOfDay.isEmpty()) {
-            recommendMealTextView.text = "Error: Please type in a valid time period: $timeOfDay."
+        val timePeriod = timePeriodMealInput.text.toString().trim()
+
+        if (timePeriod.isEmpty()) {
+            recommendMealTextView.text = "Error: Please type in a valid time period: $timePeriod"
             return
             // This message displays an error message in the Textview if the the EditText isEmpty when the recommend meal button is pressed//
         }
 
-        // the value states that if the time of day equals to the time period the list of would display//
-        val mealRecommended = if (timeOfDay == "morning") {
+
+        val mealRecommended = if (timePeriod== "morning") {   // the value states that if the time of day equals to the time period the list of would display//
             listOf("scrambled eggs", "muesli", "pancakes")
 
-
-        } else if (timeOfDay == "midday") {
+        } else if (timePeriod == "midday") {
             listOf("fruit salad", "choc chip muffin", "raisin", "biscuit")
 
-        } else if (timeOfDay == "afternoon") {
+        } else if (timePeriod== "afternoon") {
             listOf("chicken avo feta wrap", "beef sandwich", "steak&kidney pie")
 
-        } else if (timeOfDay == "late afternoon") {
+        } else if (timePeriod == "late afternoon") {
             listOf("macadamia nuts", "yoghurt", "Crisps")
 
-        } else if (timeOfDay == "evening") {
+        } else if (timePeriod == "evening") {
             listOf("spaghetti and mince", "lasagne", "macaroni and cheese")
 
-        } else if (timeOfDay == "late evening") {
+        } else if (timePeriod == "late evening") {
             listOf("sorbet", "vanilla ice cream", "apple crumble")
 
         } else  {
-               recommendMealTextView.text = " Error: Please type in a valid time period: $timeOfDay."
+               recommendMealTextView.text = " Error: Please type in a valid time period: $timePeriod"
                return
 
         }
 
-         val  mealSuggested = mealRecommended.random()
-       recommendMealTextView.text = "$mealSuggested"
-    } // the mealRecommended.random() displays the list of meals at random when the recommended button is pressed//
+         val  mealSuggested = mealRecommended.random() // the mealRecommended.random() displays the list of meals at random when the recommended button is pressed//
+        recommendMealTextView.text = "$mealSuggested"
+    }
 
 
 
     private fun recommendedBeverageButton()  {
-        val timeOfDay = timePeriodBeverageInput.text.toString().trim()
-        if(timeOfDay.isEmpty()) {
-            recommendBeverageTextView.text = "Error: Please Type in a valid time of day: $timeOfDay."
+        val timePeriod = timePeriodBeverageInput.text.toString().trim()
+
+        if(timePeriod.isEmpty()) {
+            recommendBeverageTextView.text = "Error: Please Type in a valid time period: $timePeriod"
             return
-            //This message displays an error message in the recommendBeverageTextView if the EditText has not been edited after recommendBeverage button is clicked//
+            //This Textview displays an error message in the recommendBeverageTextView if the EditText has not been edited after recommendBeverage button is clicked//
         }
 
-
-        // the value states that if the time of day equals to the time period the list of recommended beverages would display//
-        val beverageRecommended = if (timeOfDay == "morning") {
+        val beverageRecommended = if (timePeriod == "morning") {     // the value states that if the time of day equals to the time period the list of recommended beverages would display//
             listOf("coffee", "cappuccino", "espresso")
-        }    else if (timeOfDay == "midday") {
+        }    else if (timePeriod == "midday") {
             listOf("strawberry smoothie", "banana smoothie", "apple smoothie")
 
-        }    else if (timeOfDay == "afternoon") {
+        }    else if (timePeriod == "afternoon") {
             listOf("coca cola", "creme soda", "stoney")
 
-        }    else if (timeOfDay == "late afternoon") {
+        }    else if (timePeriod == "late afternoon") {
             listOf("tea", "orange juice", "apple juice")
 
-        }    else if (timeOfDay == "evening") {
+        }    else if (timePeriod == "evening") {
             listOf("Red wine", "white wine", "champagne")
 
-        }   else if (timeOfDay == "late evening") {
+        }   else if (timePeriod == "late evening") {
             listOf("sparkling water", "still water", "chamomile tea")
 
         }  else  {
-                    recommendBeverageTextView.text =" Error: please type in a valid time period: $timeOfDay"
+                    recommendBeverageTextView.text =" Error: please type in a valid time period: $timePeriod"
                     return
 
         }
-        val  beverageSuggested = beverageRecommended.random()
+        val  beverageSuggested = beverageRecommended.random()      // the beverageRecommended.random() displays the list of Beverages at random when the recommended button is clicked//
         recommendBeverageTextView.text = "$beverageSuggested"
-    }     // the beverageRecommended.random() displays the list of Beverages at random when the recommended button is clicked//
+    }
 
 
     // Resets the two EditTexts and TextViews//
