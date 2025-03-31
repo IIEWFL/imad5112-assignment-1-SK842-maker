@@ -15,8 +15,8 @@ import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var timeOfDayMealInput : EditText
-    private lateinit var timeOfDayBeverageInput : EditText
+    private lateinit var timePeriodMealInput : EditText
+    private lateinit var timePeriodBeverageInput : EditText
     private lateinit var recommendMealTextView: TextView
     private lateinit var recommendMealButton: Button
     private lateinit var recommendBeverageTextView: TextView
@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        timeOfDayMealInput = findViewById(R.id.timeOfDayMealInput)
-        timeOfDayBeverageInput = findViewById(R.id.timeOfDayBeverageInput)
+        timePeriodMealInput = findViewById(R.id.timePeriodMealInput)
+        timePeriodBeverageInput = findViewById(R.id.timePeriodBeverageInput)
         recommendMealTextView = findViewById(R.id.suggestedMeal)
         recommendMealButton = findViewById(R.id.recommendMealButton)
         recommendBeverageTextView = findViewById(R.id.suggestedBeverage)
@@ -61,10 +61,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun recommendedMealButton() {
-        val timeOfDay = timeOfDayMealInput.text.toString().trim()
+        val timeOfDay = timePeriodMealInput.text.toString().trim()
         if (timeOfDay.isEmpty()) {
-            recommendMealTextView.text = "Error: Please type in a valid time period: $timeOfDay."
-            return                     // This message displays an error message in the Textview if the the Edit text isEmpty when the recommend meal button is pressed//
+            recommendMealTextView.text = "Error: Please type in a valid time period."
+            return
+        // This message displays an error message in the Textview if the the EditText isEmpty when the recommend meal button is pressed//
         }
 
         // the value states that if the time of day equals to the time period the list of would display//
@@ -100,10 +101,11 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun recommendedBeverageButton()  {
-        val timeOfDay = timeOfDayBeverageInput.text.toString().trim()
+        val timeOfDay = timePeriodBeverageInput.text.toString().trim()
         if(timeOfDay.isEmpty()) {
             recommendBeverageTextView.text = "Error: Please Type in a valid time of day."
-            return          //This message displays an error message in the recommendBeverageTextView if the timeOfDayBeverageInput has not been edited after recommendBeveragebutton is clicked//
+            return
+        //This message displays an error message in the recommendBeverageTextView if the EditText has not been edited after recommendBeverage button is clicked//
         }
 
 
@@ -135,10 +137,10 @@ class MainActivity : AppCompatActivity() {
     }     // the beverageRecommended.random() displays the list of Beverages at random when the recommended button is clicked//
 
 
-    // Resets the two edit texts and TextViews//
+    // Resets the two EditTexts and TextViews//
     private fun handleResetButton() {
-        timeOfDayMealInput.text.clear()
-        timeOfDayBeverageInput.text.clear()
+        timePeriodMealInput.text.clear()
+        timePeriodBeverageInput.text.clear()
         recommendMealTextView.text = ""
         recommendBeverageTextView.text = ""
         return

@@ -12,23 +12,24 @@
 
 
     <EditText
-        android:id="@+id/timeOfDayMealInput"
+        android:id="@+id/timePeriodMealInput"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:ems="10"
         android:hint="Enter time Period for a Meal"
+        android:textSize="18sp"
         android:inputType="text"
         android:text=""
         android:textAlignment="center"
         android:textColor="#4CAF50"
         android:textColorHint="#D9DCF0DC"
         android:textStyle="italic"
-        android:translationX="30dp"
+        android:translationX="40dp"
         android:translationY="150dp" />
 
 
     <EditText
-        android:id="@+id/timeOfDayBeverageInput"
+        android:id="@+id/timePeriodBeverageInput"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -38,25 +39,23 @@
         android:textAlignment="center"
         android:textColor="#2196F3"
         android:textColorHint="@color/white"
+        android:textSize="18sp"
         android:textStyle="italic"
-        android:translationX="30dp"
-        android:translationY="350dp" />
-
+        android:translationX="49dp"
+        android:translationY="360dp" />
 
 
     <TextView
         android:id="@+id/suggestedBeverage"
         android:layout_width="364dp"
         android:layout_height="50dp"
+        android:background="@color/white"
         android:text=""
         android:textAlignment="center"
-        android:textSize="18sp"
         android:textColor="#7A88D9"
-        android:translationX="33dp"
-        android:background="@color/white"
+        android:textSize="18sp"
+        android:translationX="40dp"
         android:translationY="380dp" />
-
-
 
     <Button
         android:id="@+id/recommendMealButton"
@@ -79,7 +78,7 @@
         android:textSize="18sp"
         android:textAlignment="center"
         android:textColor="#FF9800"
-        android:translationX="33dp"
+        android:translationX="40dp"
         android:background="@color/white"
         android:translationY="30dp" />
 
@@ -149,9 +148,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
-        android:text= "Daily Meal and Beverage Recommender"
+        android:text="Daily Meal and Beverage Recommender"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="#4941C7"
         android:textSize="24sp"
         android:textStyle="italic"
         android:translationY="-400dp"
