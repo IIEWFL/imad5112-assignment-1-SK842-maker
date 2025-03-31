@@ -1,5 +1,6 @@
 package com.example.mealsuggestorapp
-// kincade is the G
+
+
 import android.health.connect.datatypes.MealType
 import android.os.Bundle
 import android.widget.Button
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         exitButton.setOnClickListener() {
            finishAffinity()
            exitProcess(0)
-           // this allows the user to exit the app
+
         }
 
     }
@@ -64,12 +65,12 @@ class MainActivity : AppCompatActivity() {
         val timeOfDay = timeOfDayMealInput.text.toString().trim()
         if (timeOfDay.isEmpty()) {
             recommendMealTextView.text = "Error: Please type in a valid time period: $timeOfDay."
-            return                     // This message displays an error message in the Textview if the the Edit text isEmpty when the recommend meal button is pressed//
+            return
         }
         else {
-            recommendMealTextView.text = "Error:Unable to recommend a meal for you."
+            recommendMealTextView.text = "Error: Unable to recommend a meal for you."
         }
-        // the value states that if the time of day equals to the time period the list of would display//
+
         val mealRecommended = if (timeOfDay == "morning") {
             listOf("scrambled eggs", "muesli", "pancakes")
 
@@ -97,7 +98,7 @@ class MainActivity : AppCompatActivity() {
 
          val  mealSuggested = mealRecommended.random()
        recommendMealTextView.text = "$mealSuggested"
-    } // the mealRecommended.random() displays the list of meals at random when the recommended button is pressed//
+    }
 
 
 
@@ -105,12 +106,12 @@ class MainActivity : AppCompatActivity() {
         val timeOfDay = timeOfDayBeverageInput.text.toString().trim()
         if(timeOfDay.isEmpty()) {
             recommendBeverageTextView.text = "Error: Please Type in a valid time of day."
-            return          //This message displays an error message in the recommendBeverageTextView if the timeOfDayBeverageInput has not been edited after recommendBeveragebutton is clicked//
+            return
         }
         else{
             recommendBeverageTextView.text = "Error: Unable to recommend a beverage for you "
         }
-        // the value states that if the time of day equals to the time period the list of recommended beverages would display//
+
         val beverageRecommended = if (timeOfDay == "morning") {
             listOf("coffee", "cappuccino", "espresso")
         }    else if (timeOfDay == "midday") {
@@ -135,10 +136,9 @@ class MainActivity : AppCompatActivity() {
         }
         val  beverageSuggested = beverageRecommended.random()
         recommendBeverageTextView.text = "$beverageSuggested"
-    }     // the beverageRecommended.random() displays the list of Beverages at random when the recommended button is clicked//
+    }
 
 
-    // Resets the two edit texts and TextViews//
     private fun handleResetButton() {
         timeOfDayMealInput.text.clear()
         timeOfDayBeverageInput.text.clear()

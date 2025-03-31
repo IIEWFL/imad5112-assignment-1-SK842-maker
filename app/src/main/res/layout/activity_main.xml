@@ -16,14 +16,14 @@
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="Enter time Period for a Meal"
+        android:hint="Enter a time Period for a Meal"
         android:inputType="text"
         android:text=""
         android:textAlignment="center"
         android:textColor="#4CAF50"
         android:textColorHint="#D9DCF0DC"
         android:textStyle="italic"
-        android:translationX="30dp"
+        android:translationX="33dp"
         android:translationY="150dp" />
 
 
@@ -32,14 +32,14 @@
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="Enter time Period for a Beverage"
+        android:hint="Enter a time Period for a Beverage"
         android:inputType="text"
         android:text=""
         android:textAlignment="center"
         android:textColor="#2196F3"
         android:textColorHint="@color/white"
         android:textStyle="italic"
-        android:translationX="30dp"
+        android:translationX="33dp"
         android:translationY="350dp" />
 
 
@@ -52,7 +52,7 @@
         android:textAlignment="center"
         android:textSize="18sp"
         android:textColor="#7A88D9"
-        android:translationX="20dp"
+        android:translationX="33dp"
         android:background="@color/white"
         android:translationY="380dp" />
 
@@ -79,7 +79,7 @@
         android:textSize="18sp"
         android:textAlignment="center"
         android:textColor="#FF9800"
-        android:translationX="20dp"
+        android:translationX="33dp"
         android:background="@color/white"
         android:translationY="30dp" />
 
