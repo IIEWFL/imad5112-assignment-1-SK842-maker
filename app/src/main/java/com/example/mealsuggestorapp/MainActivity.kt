@@ -1,5 +1,5 @@
 package com.example.mealsuggestorapp
-// kincade is the G
+// kincade is the G//
 import android.health.connect.datatypes.MealType
 import android.os.Bundle
 import android.widget.Button
@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+            // kincade is the G//
 
         timePeriodMealInput = findViewById(R.id.timePeriodMealInput)
         timePeriodBeverageInput = findViewById(R.id.timePeriodBeverageInput)
@@ -63,9 +64,9 @@ class MainActivity : AppCompatActivity() {
     private fun recommendedMealButton() {
         val timeOfDay = timePeriodMealInput.text.toString().trim()
         if (timeOfDay.isEmpty()) {
-            recommendMealTextView.text = "Error: Please type in a valid time period."
+            recommendMealTextView.text = "Error: Please type in a valid time period: $timeOfDay."
             return
-        // This message displays an error message in the Textview if the the EditText isEmpty when the recommend meal button is pressed//
+            // This message displays an error message in the Textview if the the EditText isEmpty when the recommend meal button is pressed//
         }
 
         // the value states that if the time of day equals to the time period the list of would display//
@@ -89,7 +90,7 @@ class MainActivity : AppCompatActivity() {
             listOf("sorbet", "vanilla ice cream", "apple crumble")
 
         } else  {
-               recommendMealTextView.text = " Error: Please type in a valid time period: $timeOfDay"
+               recommendMealTextView.text = " Error: Please type in a valid time period: $timeOfDay."
                return
 
         }
@@ -103,9 +104,9 @@ class MainActivity : AppCompatActivity() {
     private fun recommendedBeverageButton()  {
         val timeOfDay = timePeriodBeverageInput.text.toString().trim()
         if(timeOfDay.isEmpty()) {
-            recommendBeverageTextView.text = "Error: Please Type in a valid time of day."
+            recommendBeverageTextView.text = "Error: Please Type in a valid time of day: $timeOfDay."
             return
-        //This message displays an error message in the recommendBeverageTextView if the EditText has not been edited after recommendBeverage button is clicked//
+            //This message displays an error message in the recommendBeverageTextView if the EditText has not been edited after recommendBeverage button is clicked//
         }
 
 
