@@ -17,12 +17,12 @@
         android:layout_height="48dp"
         android:ems="10"
         android:hint="Enter time Period for a Meal"
-        android:textSize="18sp"
         android:inputType="text"
         android:text=""
         android:textAlignment="center"
         android:textColor="#4CAF50"
         android:textColorHint="#D9DCF0DC"
+        android:textSize="18sp"
         android:textStyle="italic"
         android:translationX="40dp"
         android:translationY="150dp" />
@@ -41,21 +41,23 @@
         android:textColorHint="@color/white"
         android:textSize="18sp"
         android:textStyle="italic"
-        android:translationX="49dp"
+        android:translationX="40dp"
         android:translationY="360dp" />
+
 
 
     <TextView
         android:id="@+id/suggestedBeverage"
         android:layout_width="364dp"
         android:layout_height="50dp"
-        android:background="@color/white"
         android:text=""
         android:textAlignment="center"
-        android:textColor="#7A88D9"
         android:textSize="18sp"
+        android:textColor="#7A88D9"
         android:translationX="40dp"
+        android:background="@color/white"
         android:translationY="380dp" />
+
 
 
     <Button
@@ -124,7 +126,7 @@
         android:id="@+id/header_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="What would you like to Eat?"
+        android:text="What Meal would You like to Eat?"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold|italic"
@@ -132,12 +134,11 @@
         android:backgroundTint="@color/white"
         android:translationY="-270dp" />
 
-
     <TextView
         android:id="@+id/header_title2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="What would you like to Drink?"
+        android:text="What Beverage would you like to Drink?"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold|italic"
@@ -150,9 +151,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
-        android:text="Daily Meal and Beverage Recommender"
+        android:text= "Daily Meal and Beverage Recommender"
         android:textAlignment="center"
-        android:textColor="#4941C7"
+        android:textColor="#673AB7"
         android:textSize="24sp"
         android:textStyle="italic"
         android:translationY="-400dp"
