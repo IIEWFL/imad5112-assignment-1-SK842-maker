@@ -57,6 +57,7 @@
         android:translationX="40dp"
         android:translationY="380dp" />
 
+
     <Button
         android:id="@+id/recommendMealButton"
         android:layout_width="match_parent"
@@ -130,6 +131,7 @@
         android:textColor="#4CAF50"
         android:backgroundTint="@color/white"
         android:translationY="-270dp" />
+
 
     <TextView
         android:id="@+id/header_title2"
