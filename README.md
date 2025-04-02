@@ -1,49 +1,52 @@
-# Meal Sugggestor App
-**Developer**: Samkelo Nkosnathi Khoza
-**Student Number**: ST10470317
-**#Group**: 1
-**#Course**: Higher Certificate in Mobile Aplication Development and web DevelopMent **Subject**: IMAD5112
+ # Daily Meal and Bevrage Recommender
+ ## **Developer**: Samkelo Nkosnathi Khoza
+ ## **Student Number**: ST10470317
+ ## **Group**: 1
+ ## **Course**: Higher Certificate in Mobile Aplication Development and web DevelopMent **Subject**: IMAD5112
+ 
+----
 
-## Links
-**GitHub Repository**: [Repository URL]
- **YouTube Video**: https://youtu.be/v3WrIwitLXk
+# Links
+### **GitHub Repository**: https://github.com/IIEWFL/imad5112-assignment-1-SK842-maker.git
+### **YouTube Video**: https://youtu.be/v3WrIwitLXk
+ 
 ---
 
-
-Project Overview
-
--
-   
-The *Meal Suggestor is a mobile application developed as part of an assignment in the IMAD5112 subject. This application was created using **Kotlin** and **Android Studio**. The app's primary purpose is to [briefly describe the purpose of the app, e.g., provide a task management system, display weather forecasts, etc.].
-                                                                                                                                                               
+## Project Overview
+ 
+The *Meal Suggestor is a mobile application developed as part of an assignment in the IMAD5112 subject.
+This application was created using **Kotlin** and **Android Studio**. The app's primary purpose is to Display a suggested meal after a the user has input the time period in orderder for a meal to be suggested.
 The app was developed to meet the requirements of the assignment, which includes creating a functional mobile app and utilizing GitHub for version control and CI/CD automation using GitHub Actions.
----
+
+----
                                                                                                             
-App Purpose and Features
+## App Purpose and Features
 
 ### Purpose:
 The main goal of this app is to randomly Suggest A meal and  a beverage based on the time period of that day. 
 
-### Key Features:
- [ "UI Input of the Time Period for the Meal"]
- [ "UI Input of the Time Period for the Beverage"]
- [ "reccommendationMealButton"]
- [ "reccommendationBeverageButton"]
- [ "ResetButton"]
+# Key Features:
 
-These features aim to provide  The User to have randomly suggested meal or beverage to have depending on the time period. This benifits the user by not having to struggle on what meal or beverage to have
-throughout the course of the day. The Apps UI Inputs allow for the user to Enter any timePeriod in order for a meal or beverage to be randomly generated.
-the 2 biggest features that play a vital role in intizilaizing the the running and functionality of the app are the two buttons for the recommendedMeal and Beverage.
-Each of the buttons are initilized as private functions in order for the Processed information that was inputed in for the 1st two features to display an output answer for two of the text answers
-suggested meal and suggested beverage.
-The last Feature is the reset Button. The reset Button allows the user to Reset both the UI input and Processed aswers after Recommending a Meal or beverage.
+#### These features aim to provide the User to have randomly suggested/recommend a Meal or Beverage to have depending on the time period. This would benifit the user by not having to struggle to decide on what meal or beverage to have throughout the course of the day. 
+
+#### The Apps UI Inputs allow for the user to Enter any timePeriod in order for a meal or beverage to be randomly generated.
+
+### "UI Input of the Time Period for the Meal"
+### "UI Input of the Time Period for the Beverage"
+
+#### The 2 biggest features that play a vital role in intizilaizing the the running and functionality of the app are the two buttons for the recommendedMeal and recommendBeverage Buttons.Each of the buttons are initilized as private functions in order for the Processed information that was inputed in for the 1st two features to display an output answer for two of the texts "Outputs"suggested meal and suggested beverage.
+
+### "RecommendationMealButton"
+### "RecommendationBeverageButton"
+
+#### The last Feature is the reset Button. The reset Button allows the user to Reset both the UI input and Processed aswers after Recommending a Meal or beverage.
+
+### "ResetButton"
 
 ----
 - This section breaks down the specific features and the purpose of the app, giving clarity on the app’s functionality.
 
----
 
-4. Design Considerations
 ## Design Considerations
 
 The design of the **[Meal Suggestor app]** was based on the following key considerations:
@@ -59,15 +62,7 @@ think for themselves on what to eat or drink for that time period. Instead the A
 4. **Performance**:  The Meal Suggestor App Installation Process conssits of a very short Launching time. due to the optimization of
 the two private functions. Each of the functions contain  conditional loops of if and else functions witch act as Code blocks that assist in the management of resources and computer logic.
 
-
-
-Why:
-----
-- Highlights the thought process behind the design choices. It demonstrates that students are considering not just the functionality, but also the usability and performance aspects of the app, which is a professional approach.
-
 ---
-
-5. GitHub and GitHub Actions Utilization
 ## GitHub and GitHub Actions
 
 This project was managed using **GitHub** for version control, where all code changes were committed and pushed regularly. GitHub enabled collaborative coding, allowing me to keep track of changes and maintain project integrity.
@@ -83,29 +78,25 @@ The workflow ensures that my project is automatically built and tested every tim
 ```markdown
 
 ```
-
 Why:
 ----
 - This section educates students on why they should understand version control (GitHub) and automation (GitHub Actions). It shows how they’re adopting industry-standard practices, which is useful for both academic purposes and career development.
 
 ---
 
-6. Screenshots and App Demo
 ### App Screenshots:
-![Screenshot 1]![Screenshot_20250331_210511](https://github.com/user-attachments/assets/abb5b24e-4a1c-4a05-a133-7b33a1148beb)
 
-*Caption for screenshot 1: [Describe the context, e.g., "The home screen of the app showing the task list."]*
+![Screenshot 1]![Screenshot_20250331_210511](https://github.com/user-attachments/assets/abb5b24e-4a1c-4a05-a133-7b33a1148beb)
+*Caption for screenshot 1: this is the User interface of the Daily Meal and Beverage recommendor Application*
 
 ### Video Demo:
-A video showcasing the app's functionality can be viewed here: [YouTube Video Link].
+A video showcasing the app's functionality can be viewed here: https://youtu.be/v3WrIwitLXk.
 
 Why:
 ----
 - Visuals like screenshots or a video link provide concrete evidence of the app’s functionality. This is an easy way for the reader to see what the app looks like and how it operates.
 
 
-7. Challenges and Learnings
----------------------------
 
 ## Challenges and Learnings
 
@@ -139,14 +130,19 @@ Why:
 ```markdown
 
 ```
-9. References
-Conditions and Loops. (2024, December 4). Retrieved from Kotlin: https://kotlinlang.org/docs/control-flow.html
+## References
+    
+## Conditions and Loops. (2024, December 4). Retrieved from Kotlin: 
+https://kotlinlang.org/docs/control-flow.html
 
-How to Change the Background color in android app. (2023, September 8). Retrieved from Medium: https://medium.com/@duaaawan/how-to-change-background-color-in-android-app-3d4dea54f35f#:~:text=If%20you%20wish%20to%20change,background%20color%20of%20your%20view.&text=Now%20Build%20and%20Run%20the,to%20the%20one%20you%20specified.
+## How to Change the Background color in android app. (2023, September 8). Retrieved from Medium: 
+https://medium.com/@duaaawan/how-to-change-background-color-in-android-app-3d4dea54f35f#:~:text=If%20you%20wish%20to%20change,background%20color%20of%20your%20view.&text=Now%20Build%20and%20Run%20the,to%20the%20one%20you%20specified.
 
-Torres, D. (2024, March 19). Get a Random Item From a list in Kotlin. Retrieved from Baeldung: https://www.baeldung.com/kotlin/list-get-random-item
+## Torres, D. (2024, March 19). Get a Random Item From a list in Kotlin. Retrieved from Baeldung:
+https://www.baeldung.com/kotlin/list-get-random-item
 
-W3 Schools. (n.d.). Kotlin If... else. Retrieved from W3Schools: https://www.w3schools.com/kotlin/kotlin_conditions.php
+## W3 Schools. (n.d.). Kotlin If... else. Retrieved from W3Schools:
+https://www.w3schools.com/kotlin/kotlin_conditions.php
 
 Why:
 ----
@@ -167,12 +163,6 @@ Why:
   Why:
 ----
 - This section provides a clear reference to all the images included in the document, which improves readability and helps the lecturer follow along with the visuals.
-
-
-11. Disclosure of AI Usage in My Assessment
--------------------------------------------
-
-## Disclosure of AI Usage in My Assessment
 
 ## Disclosure of AI Usage in My Assessment
 
