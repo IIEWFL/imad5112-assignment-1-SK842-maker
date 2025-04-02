@@ -78,10 +78,6 @@ The workflow ensures that my project is automatically built and tested every tim
 ```markdown
 
 ```
-Why:
-----
-- This section educates students on why they should understand version control (GitHub) and automation (GitHub Actions). It shows how they’re adopting industry-standard practices, which is useful for both academic purposes and career development.
-
 ---
 
 ### App Screenshots:
@@ -92,40 +88,30 @@ Why:
 ### Video Demo:
 A video showcasing the app's functionality can be viewed here: https://youtu.be/v3WrIwitLXk.
 
-Why:
-----
-- Visuals like screenshots or a video link provide concrete evidence of the app’s functionality. This is an easy way for the reader to see what the app looks like and how it operates.
-
-
 
 ## Challenges and Learnings
 
 During the development of this project, I encountered several challenges, including:
 
-1. **Challenge 1**: [Trying to inizilize a Random function in the Meal list String With the Nested if function]
-   - **Solution**: [I Asked Chat GPT how  the Radom function i wanted to Connect with the List of strings should look like]
+ **Challenge 1**: [Trying to inizilize a Random function in the Meal list String With the Nested if function]
+    **Solution**: [I Asked Chat GPT how  the Radom function i wanted to Connect with the List of strings should look like]
+    
    
-2. **Challenge 2**: [Describe another challenge, e.g., "Debugging issues related to Gradle builds."]
-   - **Solution**: [How you solved the challenge.]
-
-From these challenges, I learned important lessons in debugging, using version control, and automating build processes with GitHub Actions.
-
-Why:
-----
-- Reflecting on challenges and solutions shows growth and problem-solving skills, which are critical for students. It also gives insight into their learning process, which can be valuable to employers.
-
----
-8. Future Enhancements
-While the current version of the app provides the core functionality, there are several features that could be added in the future, including:
-
-1. **Feature 1**: [Description, e.g., "Allowing users to set up reminders or notifications."]
-2. **Feature 2**: [Description, e.g., "Integrating with a cloud database for storing user data."]
-3. **Feature 3**: [Description, e.g., "Adding a dark mode option for better user experience."]
+ **Challenge 2**: [Trying to get the Emulator Running causing the App to crash ."]
+    **Solution**: [Changed the The virtual device being used for the emulator to a diffrent Virtual device ]
 
 
-Why:
-----
-- Suggesting future improvements shows forward thinking and a desire to continuously improve. It also demonstrates that the student has a clear vision for the app beyond the current assignment.
+**Challenge 3**:  [Declration of findviewbyid errors everytime i declare a new variable in the Main Activity Kotlin file."] 
+       **Solution**: [Rebuild the gradle files so that the Variables could declare themselves without having to make any changes in the activity main file ]
+
+
+
+##  Future Enhancements
+   While the current version of the app provides the core functionality, there are several features that could be added in the future, including:
+
+ **Feature 1**: Reccommend Based on mood "This Feature  would work based on a users facial expression. therefore tha Application would Randomly Recommend a Meal based on facial eaxpression of the user."
+ **Feature 2**: Allergy Detector "When a meal is randomly Recommended the app would be able to detect wether you are able to have this maeal or beverage when you input what meal or beverage you may be allergic to."
+
 
 ```markdown
 
@@ -144,26 +130,14 @@ https://www.baeldung.com/kotlin/list-get-random-item
 ## W3 Schools. (n.d.). Kotlin If... else. Retrieved from W3Schools:
 https://www.w3schools.com/kotlin/kotlin_conditions.php
 
-Why:
-----
-- The References section is critical for academic work to acknowledge the resources and inspiration used during the project.
+## How to Chenge Background Color in Activity main xml android studio
+https://www.youtube.com/watch?v=TzjF8MSVV7w
 
 
 ```markdown
 
-
 ```
-10. List of Figures
--------------------
-## List of Figures
-
-- **Figure 1**: Screenshot of the app's home screen.
-- **Figure 2**: Screenshot of the user profile screen.
-
-  Why:
 ----
-- This section provides a clear reference to all the images included in the document, which improves readability and helps the lecturer follow along with the visuals.
-
 
 
 ## Disclosure of AI Usage in My Assessment
@@ -171,37 +145,51 @@ Why:
 In the development of this project, I have used generative AI tools to assist in various parts of the assignment. Below is a detailed disclosure of where and how these tools were used:
 
 ### 1. **Section(s) in which Generative AI was used:**
-- **Question 2.2**: Used AI for brainstorming ideas for the app's features.
-- **Part 5**: Assisted in creating code snippets for setting up GitHub Actions workflows.
-- **Part 3**: Used AI to help improve the grammar and clarity of the report.
+Used AI for brainstorming ideas for the app's features.
 
-### 2. **Name of AI Tool(s) Used:**
-- **ChatGPT** (OpenAI)
-- **GitHub Copilot** (GitHub)
+### **Name of AI Tool(s) Used:**
+**ChatGPT** (OpenAI)
 
-### 3. **Purpose/Intention Behind Use:**
+###  **Purpose/Intention Behind Use:**
 - **Brainstorming**: Used ChatGPT to generate ideas for the app’s features and functionality.
-- **Meaning Making**: Used AI to clarify some concepts and gain a better understanding of how certain technologies (e.g., GitHub Actions) work.
-- **Initial Investigation**: Utilized AI to conduct research on best practices for Android app development and GitHub Actions setup.
-- **Code Assistance**: GitHub Copilot was used to assist in writing specific parts of the code, such as setting up GitHub Actions and working with Gradle.
-- **Correcting Grammar and Spelling**: ChatGPT helped review and correct the grammar and clarity of my project report.
 
-### 4. **Date(s) in Which Generative AI Was Used:**
-- **Question 2.2**: AI used on **March 5, 2025** for brainstorming feature ideas.
-- **Part 5**: AI used on **March 8, 2025** to help set up GitHub Actions.
-- **Part 3**: AI used on **March 10, 2025** for reviewing the final report.
+ **Date(s) in Which Generative AI Was Used:**
+ 
+-  **March 20, 2025**
+-  **March 30, 2025**
+- **15 March, 2025**
+
+
+
 
 ### 5. **Link to the AI Chat(s) or Screenshots:**
-- **Chat 1 (Brainstorming App Features)**: [Link to the AI conversation/chat](insert_link_here)  
-  *(Screenshot/Link to Chat: AI provided feature ideas for app development)*
 
-- **Chat 2 (GitHub Actions Workflow Setup)**: [Link to the AI conversation/chat](insert_link_here)  
-  *(Screenshot/Link to Chat: AI assisted with configuring GitHub Actions for the project)*
+ **Chat 1 (Brainstorming App Features)**:
+ [Link to the AI conversation/chat]((https://chatgpt.com/share/67ed7e80-6f3c-8008-88b9-5f9fb164d60d))  
+ ![Screenshot 2025-04-02 202306](https://github.com/user-attachments/assets/7a953fbd-de1a-4776-85a8-a94a8dd33f69)
+ ![Screenshot 2025-04-02 202517](https://github.com/user-attachments/assets/016bd09f-6208-47e2-9eb3-311f43a18e59)
 
-- **Chat 3 (Grammar Review)**: [Link to the AI conversation/chat](insert_link_here)  
-  *(Screenshot/Link to Chat: AI helped in reviewing and correcting the report’s grammar)*
 
-Why:
+ **Chat 2 ( Error Handling Code)**:
+ ![Screenshot 2025-04-02 203433](https://github.com/user-attachments/assets/fabab4a2-b561-41e3-833f-4c24fa9e5cb0)
+ ![Screenshot 2025-04-02 203520](https://github.com/user-attachments/assets/0b0f969c-d038-491f-83d5-c653ff019fb0)
+ ![Screenshot 2025-04-02 203818](https://github.com/user-attachments/assets/47bddbd6-bd59-4761-a4ea-e68406e26cdc)
+ [Link to the AI conversation/chat]((https://chatgpt.com/share/67ed8e06-6f8c-8008-b542-ed80846c390c))
+
+ 
+**Chat 3 (Error Displaying Text in Textview After Button Click)**:
+![Screenshot 2025-04-02 204146](https://github.com/user-attachments/assets/42de48d1-eb91-4fc4-81ae-09076ff2038e)
+![Screenshot 2025-04-02 204229](https://github.com/user-attachments/assets/79d09474-1166-47b4-9add-715b1c6b34a9)
+![Screenshot 2025-04-02 204738](https://github.com/user-attachments/assets/e309d9c6-32cb-4e15-b6d7-6707d49be31e)
+![Screenshot 2025-04-02 204934](https://github.com/user-attachments/assets/d886ab99-64b9-420c-8e40-d6f91cde0ffd)
+
+
+**Chat 4 ( I asked  Chat to see if My code would work without when statement and instead use a nested if Function)**:
+![Screenshot 2025-04-02 205418](https://github.com/user-attachments/assets/622772ae-8e6c-4e57-9eb5-1d7a42ac720e)
+
+ 
+
+
 ----
 - This section ensures that students are transparent about using AI tools in their project, promoting academic honesty and adhering to institution guidelines.
 
